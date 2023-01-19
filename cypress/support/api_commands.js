@@ -61,7 +61,10 @@ Cypress.Commands.add('api_deleteProjects', () => {
     cy.request({
       method: 'POST',
       url: `/api/v4/projects/${projectId}/milestones`,
-      body: { title: milestone.title },
+      body: {
+        title: milestone.title,
+        description: milestone.description
+      },
       headers: { Authorization: accessToken },
     })
   })

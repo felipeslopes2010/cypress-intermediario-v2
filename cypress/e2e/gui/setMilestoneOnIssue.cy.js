@@ -13,7 +13,8 @@ describe('Atribue Milestone a uma Issue', options, () => {
   }
 
   const milestone = {
-    title: `milestone-${faker.random.word()}`
+    title: `milestone-${faker.random.word()}`,
+    description: faker.random.words(5)
   }
 
   beforeEach(() => {
